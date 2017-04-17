@@ -39,8 +39,8 @@ class CalculateBrain{
             case .Binary(let fun):
                 executeEquals()
                 pending = pendingBinOpInfo(banaryOperation: fun, firstOperand: accumulate)
-            case .Equals: executeEquals() 
-
+            case .Equals: executeEquals()
+123
 
             }
         }
