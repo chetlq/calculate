@@ -40,7 +40,6 @@ class CalculateBrain{
                 executeEquals()
                 pending = pendingBinOpInfo(banaryOperation: fun, firstOperand: accumulate)
             case .Equals: executeEquals()
-123
 
             }
         }
