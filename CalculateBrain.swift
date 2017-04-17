@@ -27,7 +27,10 @@ class CalculateBrain{
         "π" : operation.Constant(M_PI), //M_PI,
         "e" : operation.Constant(M_E), //M_E
         "√" : operation.Unary(sqrt),
-        "×" : operation.Binary(multiplay),
+        "×" : operation.Binary( {$0*$1  } ),
+        "+" : operation.Binary( {$0+$1  } ),
+        "-" : operation.Binary( {$0-$1  } ),
+        "/" : operation.Binary( {$0/$1  } ),
         "=" : operation.Equals
     ]
     
