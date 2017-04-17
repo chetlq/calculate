@@ -52,10 +52,11 @@ class ViewController: UIViewController {
     @IBAction func pibutton(_ sender: UIButton) {
         if itmot{
             brain.setOperand(operand: displayValue)
+            itmot = false
         }
         if let mathSymbol = sender.currentTitle{
             brain.perfomOperation(symbol: mathSymbol)
-            itmot = false
+            
 //            if mathSymbol == "π" {
 //                displayValue =  M_PI
 //            }

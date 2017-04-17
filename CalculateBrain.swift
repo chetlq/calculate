@@ -19,10 +19,13 @@ return op1*op2
 
 class CalculateBrain{
     var accumulate = 0.0
+    
+    
     func setOperand (operand:Double){
     accumulate = operand
     }
     
+    //таблица операций
     var Operations: Dictionary<String, operation> = [
         "π" : operation.Constant(M_PI), //M_PI,
         "e" : operation.Constant(M_E), //M_E
@@ -34,6 +37,7 @@ class CalculateBrain{
         "=" : operation.Equals
     ]
     
+    //выбор операций
     func perfomOperation (symbol:String){
         if let operation = Operations[symbol]{
             switch operation {
@@ -58,11 +62,13 @@ class CalculateBrain{
     
     var pending : pendingBinOpInfo?
     
+    //+-*/
     struct pendingBinOpInfo {
         var banaryOperation:(Double,Double)->Double
         var firstOperand : Double
     }
     
+    //типы операций
     enum operation {
         case Constant(Double)
         case Unary((Double)->Double)
